@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>MENGANXUN | Luxury Wigs & Hairpieces</title>
+    <meta name="description" content="MENGANXUN premium wigs shipped from Guangzhou, China. Fast 3-5 day delivery to the UK. Elegant, handcrafted quality.">
+    <!-- Fonts + Font Awesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FEFCF8;
+            color: #1A1A1A;
+            scroll-behavior: smooth;
+            line-height: 1.5;
+        }
+
+        h1, h2, h3, .logo, .hero-title, .section-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 500;
+            letter-spacing: -0.02em;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 32px;
+        }
+
+        /* header */
+        header {
+            position: sticky;
+            top: 0;
+            background: rgba(254, 252, 248, 0.96);
+            backdrop-filter: blur(12px);
+            z-index: 100;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            padding: 20px 0;
+        }
+
+        .nav-bar {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .logo a {
+            font-size: 1.9rem;
+            font-weight: 600;
+            text-decoration: none;
+            color: #1A1A1A;
+            letter-spacing: -0.01em;
+            display: inline-flex;
+            align-items: baseline;
+            gap: 4px;
+        }
+        .logo .brand {
+            font-family: 'Cormorant Garamond', serif;
+            letter-spacing: 1px;
+        }
+        .logo .dot-shop {
+            font-size: 0.9rem;
+            font-weight: 400;
+            font-family: 'Inter', sans-serif;
+            color: #AA7C5C;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 36px;
+            list-style: none;
+        }
+        .nav-links a {
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            color: #2C2C2C;
+            transition: color 0.2s;
+        }
+        .nav-links a:hover {
+            color: #AA7C5C;
+        }
+
+        /* hero */
+        .hero {
+            padding: 80px 0 70px 0;
+            background: linear-gradient(135deg, #FCF7F0 0%, #F9EFE4 100%);
+            border-bottom: 1px solid #EADBCE;
+        }
+        .hero-grid {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 48px;
+        }
+        .hero-content {
+            flex: 1;
+        }
+        .hero-badge {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #AA7C5C;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+        .hero-title {
+            font-size: 3.9rem;
+            line-height: 1.2;
+            font-weight: 500;
+            margin-bottom: 20px;
+            color: #1E1B1A;
+        }
+        .hero-desc {
+            font-size: 1.05rem;
+            color: #4A413C;
+            max-width: 500px;
+            margin-bottom: 32px;
+        }
+        .btn-group {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        .btn-primary {
+            background-color: #1A1A1A;
+            color: white;
+            padding: 12px 28px;
+            border: none;
+            border-radius: 40px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: 0.25s;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 0.9rem;
+        }
+        .btn-primary:hover {
+            background-color: #AA7C5C;
+            transform: translateY(-2px);
+        }
+        .btn-outline {
+            background: transparent;
+            border: 1px solid #1A1A1A;
+            padding: 12px 28px;
+            border-radius: 40px;
+            font-weight: 500;
+            color: #1A1A1A;
+            text-decoration: none;
+            transition: 0.25s;
+            display: inline-block;
+        }
+        .btn-outline:hover {
+            background: #1A1A1A;
+            color: white;
+        }
+        .hero-visual {
+            flex: 1;
+            min-width: 250px;
+            text-align: center;
+        }
+        .hero-visual img {
+            max-width: 100%;
+            border-radius: 28px;
+            box-shadow: 0 25px 40px -15px rgba(0,0,0,0.15);
+        }
+
+        section {
+            padding: 80px 0;
+        }
+        .section-title {
+            font-size: 2.6rem;
+            margin-bottom: 16px;
+            text-align: center;
+            font-weight: 500;
+        }
+        .section-sub {
+            text-align: center;
+            color: #6A5C53;
+            max-width: 680px;
+            margin: 0 auto 48px auto;
+        }
+
+        /* product grid */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 20px;
+        }
+        .product-card {
+            background: white;
+            border-radius: 24px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.02);
+            border: 1px solid #F0EBE4;
+        }
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 35px -12px rgba(0,0,0,0.1);
+            border-color: #EADBCE;
+        }
+        .product-img {
+            height: 340px;
+            overflow: hidden;
+        }
+        .product-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s;
+        }
+        .product-card:hover .product-img img {
+            transform: scale(1.03);
+        }
+        .product-info {
+            padding: 20px 20px 24px;
+        }
+        /* 产品标题已全部删除 */
+        .product-desc {
+            font-size: 0.85rem;
+            color: #6F6A64;
+            margin-bottom: 16px;
+            line-height: 1.4;
+        }
+        .product-price {
+            font-weight: 600;
+            font-size: 1.2rem;
+            color: #AA7C5C;
+            margin-bottom: 20px;
+        }
+        .btn-inquire {
+            background: none;
+            border: 1px solid #D4C9BD;
+            padding: 10px 0;
+            width: 100%;
+            border-radius: 40px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: 0.2s;
+            font-size: 0.85rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            color: #2C2C2C;
+            text-decoration: none;
+        }
+        .btn-inquire i {
+            font-size: 0.8rem;
+        }
+        .btn-inquire:hover {
+            background-color: #1A1A1A;
+            border-color: #1A1A1A;
+            color: white;
+        }
+
+        /* info cards shipping */
+        .info-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            background: #FFFFFF;
+            border-radius: 32px;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.03);
+            padding: 48px 40px;
+            margin-top: 20px;
+            border: 1px solid #F2EBE3;
+        }
+        .info-block {
+            flex: 1;
+        }
+        .info-block h3 {
+            font-size: 1.6rem;
+            margin-bottom: 20px;
+            font-family: 'Cormorant Garamond', serif;
+        }
+        .info-block p, .info-block li {
+            color: #4F4943;
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+        }
+        .info-block ul {
+            list-style: none;
+        }
+        .info-block li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .info-block i {
+            width: 22px;
+            color: #AA7C5C;
+        }
+        .highlight {
+            font-weight: 600;
+            color: #1A1A1A;
+        }
+
+        /* privacy */
+        .privacy-container {
+            background: #FCF9F5;
+            border-radius: 28px;
+            padding: 40px 42px;
+            margin-top: 20px;
+            border: 1px solid #EADBCE;
+        }
+        .privacy-container h4 {
+            font-size: 1.5rem;
+            font-family: 'Cormorant Garamond', serif;
+            margin-bottom: 20px;
+        }
+        .privacy-container p, .privacy-container li {
+            font-size: 0.85rem;
+            color: #544C46;
+            line-height: 1.5;
+            margin-bottom: 12px;
+        }
+        .privacy-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+        }
+        @media (max-width: 780px) {
+            .privacy-grid { grid-template-columns: 1fr; }
+            .info-row { flex-direction: column; }
+            .hero-title { font-size: 2.5rem; }
+            .container { padding: 0 24px; }
+            .nav-links { gap: 20px; }
+        }
+
+        footer {
+            border-top: 1px solid #EADBCE;
+            padding: 48px 0 40px;
+            background: #FEFCF8;
+        }
+        .footer-flex {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 24px;
+        }
+        .footer-email a {
+            text-decoration: none;
+            color: #AA7C5C;
+            font-weight: 500;
+        }
+        .social-icons i {
+            font-size: 1.3rem;
+            margin-left: 18px;
+            color: #7C6E62;
+            transition: 0.2s;
+        }
+        .social-icons i:hover { color: #1A1A1A; }
+        .copyright {
+            font-size: 0.75rem;
+            color: #9C9086;
+        }
+
+        .scroll-top {
+            position: fixed;
+            bottom: 30px;
+            right: 24px;
+            background: #1A1A1A;
+            color: white;
+            width: 44px;
+            height: 44px;
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            transition: 0.25s;
+            pointer-events: none;
+            z-index: 99;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .scroll-top.show {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        a {
+            text-decoration: none;
+        }
+        hr {
+            margin: 20px 0;
+            border-color: #EEE5DC;
+        }
+        .domain-note {
+            font-size: 0.75rem;
+            color: #9B8C7E;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <div class="nav-bar">
+            <div class="logo">
+                <a href="#">
+                    <span class="brand">MENGANXUN</span>
+                    <span class="dot-shop">.shop</span>
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Wigs</a></li>
+                <li><a href="#shipping">Shipping</a></li>
+                <li><a href="#privacy">Privacy</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</header>
+
+<main>
+    <section id="home" class="hero">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <div class="hero-badge">Artisanal Luxury • London & UK</div>
+                <h1 class="hero-title">Effortless Elegance,<br>Handcrafted Wigs</h1>
+                <p class="hero-desc">Premium 100% human hair wigs, shipped from Guangzhou, China. Express 3–5 business day delivery to the United Kingdom.</p>
+                <div class="btn-group">
+                    <a href="#products" class="btn-primary">Explore Collection</a>
+                    <a href="mailto:DwayneMoore488950@hotmail.com?subject=Wholesale%20Inquiry" class="btn-outline">Trade Inquiry</a>
+                </div>
+                <div style="margin-top: 32px; font-size: 0.8rem; color:#8C7A6B;">
+                    <i class="fas fa-truck-fast"></i> Free UK Shipping · 3-5 days delivery
+                </div>
+            </div>
+            <div class="hero-visual">
+                <img src="https://images.unsplash.com/photo-1580618672591-eb180b1a873f?w=600&h=700&fit=crop" alt="Luxury wig model">
+            </div>
+        </div>
+    </section>
+
+    <section id="products">
+        <div class="container">
+            <h2 class="section-title">Our Signature Collection</h2>
+            <p class="section-sub">Ethically sourced, hand-tied & made for modern elegance. Each wig is crafted to enhance your natural beauty.</p>
+            <div class="product-grid">
+                <!-- 产品1 -->
+                <div class="product-card">
+                    <div class="product-img"><img src="images/Product Image 1.jpg" alt="Silky Straight Wig"></div>
+                    <div class="product-info">
+                        <div class="product-desc">Long curly hair wig</div>
+                        <div class="product-price">189 USD</div>
+                        <a href="mailto:DwayneMoore488950@hotmail.com?subject=Inquiry%20-%20Silky%20Straight%20Wig" class="btn-inquire"><i class="fas fa-envelope"></i> Request Quote</a>
+                    </div>
+                </div>
+                <!-- 产品2 -->
+                <div class="product-card">
+                    <div class="product-img"><img src="images/Product Image 2.jpg" alt="Deep Curly Wig"></div>
+                    <div class="product-info">
+                        <div class="product-desc">Wavy curly hair</div>
+                        <div class="product-price">199 USD</div>
+                        <a href="mailto:DwayneMoore488950@hotmail.com?subject=Inquiry%20-%20Deep%20Curly%20Wig" class="btn-inquire"><i class="fas fa-envelope"></i> Request Quote</a>
+                    </div>
+                </div>
+                <!-- 产品3 -->
+                <div class="product-card">
+                    <div class="product-img"><img src="images/Product Image 3.jpg" alt="Body Wave Wig"></div>
+                    <div class="product-info">
+                        <div class="product-desc">Claw style ponytail wig</div>
+                        <div class="product-price">236 USD</div>
+                        <a href="mailto:DwayneMoore488950@hotmail.com?subject=Inquiry%20-%20Body%20Wave%20Wig" class="btn-inquire"><i class="fas fa-envelope"></i> Request Quote</a>
+                    </div>
+                </div>
+                <!-- 产品4 -->
+                <div class="product-card">
+                    <div class="product-img"><img src="images/Product Image 4.jpg" alt="Lace Front Wig"></div>
+                    <div class="product-info">
+                        <div class="product-desc">Black curly hair, high ponytail</div>
+                        <div class="product-price">249 USD</div>
+                        <a href="mailto:DwayneMoore488950@hotmail.com?subject=Inquiry%20-%20Lace%20Front%20HD" class="btn-inquire"><i class="fas fa-envelope"></i> Request Quote</a>
+                    </div>
+                </div>
+                <!-- 产品5 -->
+                <div class="product-card">
+                    <div class="product-img"><img src="images/Product Image 5.jpg" alt="Balayage Blonde"></div>
+                    <div class="product-info">
+                        <div class="product-desc">Long mermaid wavy wig</div>
+                        <div class="product-price">259 USD</div>
+                        <a href="mailto:DwayneMoore488950@hotmail.com?subject=Inquiry%20-%20Balayage%20Blonde" class="btn-inquire"><i class="fas fa-envelope"></i> Request Quote</a>
+                    </div>
+                </div>
+                <!-- 产品6 -->
+                <div class="product-card">
+                    <div class="product-img"><img src="images/Product Image 6.jpg" alt="Short Pixie Cut"></div>
+                    <div class="product-info">
+                        <div class="product-desc">Long straight golden wig</div>
+                        <div class="product-price">169 USD</div>
+                        <a href="mailto:DwayneMoore488950@hotmail.com?subject=Inquiry%20-%20Chic%20Pixie" class="btn-inquire"><i class="fas fa-envelope"></i> Request Quote</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="shipping">
+        <div class="container">
+            <div class="info-row">
+                <div class="info-block">
+                    <h3><i class="fas fa-map-pin" style="margin-right: 8px;"></i> Shipping & Fulfillment</h3>
+                    <ul>
+                        <li><i class="fas fa-flag-checkered"></i> <span class="highlight">Origin:</span> Guangzhou, China</li>
+                        <li><i class="fas fa-clock"></i> <span class="highlight">Processing time:</span> Within 3 business days after order confirmation</li>
+                        <li><i class="fas fa-shipping-fast"></i> <span class="highlight">Transit to UK:</span> 3–5 business days (express courier)</li>
+                        <li><i class="fas fa-pound-sign"></i> <span class="highlight">Main market:</span> United Kingdom (worldwide shipping available)</li>
+                        <li><i class="fas fa-box"></i> Discreet, secure packaging with tracking number provided.</li>
+                    </ul>
+                    <p style="margin-top: 16px;">✈️ Duties & taxes may apply; customer responsibility. For urgent inquiries, reach us via email.</p>
+                </div>
+                <div class="info-block">
+                    <h3><i class="fas fa-medal"></i> Quality Pledge</h3>
+                    <p>All wigs are meticulously handcrafted and inspected before dispatch. Our atelier in Guangzhou works with ethical sourcing and premium materials. We ship to the UK with DHL 、FedEx、JCEX Express priority services, ensuring your order arrives in perfect condition.</p>
+                    <p><strong>Return window:</strong> 14 days after delivery (unworn, original packaging). For details, contact our support team.</p>
+                    <div style="background:#F4EFE9; border-radius: 20px; padding: 16px; margin-top: 16px;">
+                        <i class="fas fa-envelope-open-text"></i> <strong>Customer care:</strong> <a href="mailto:DwayneMoore488950@hotmail.com" style="color:#AA7C5C;">DwayneMoore488950@hotmail.com</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="privacy">
+        <div class="container">
+            <h2 class="section-title">Privacy & Legal</h2>
+            <p class="section-sub">We value your trust. Read how MENGANXUN handles your data and respects your privacy.</p>
+            <div class="privacy-container">
+                <h4>Privacy Policy – menganxun <span style="font-family: 'Inter'; font-size: 1rem;">.shop</span></h4>
+                <div class="privacy-grid">
+                    <div>
+                        <p><strong>Information we collect</strong><br>We collect name, email address, shipping address, and order details when you contact us or place an order. Payment is processed via secure third-party gateways – we never store full payment information.</p>
+                        <p><strong>How we use your data</strong><br>To process orders, ship products (from Guangzhou, China), communicate shipping updates, and improve our services. We may also send you marketing emails only after explicit consent.</p>
+                        <p><strong>Data sharing</strong><br>We share necessary data with shipping carriers and customs authorities for UK delivery. No selling to third parties.</p>
+                    </div>
+                    <div>
+                        <p><strong>Your rights (GDPR / UK GDPR)</strong><br>You have the right to access, rectify, erase, or restrict processing of your personal data. Contact us via the email below to exercise any rights.</p>
+                        <p><strong>Cookies</strong><br>Our site uses essential cookies for functionality and analytics. You can manage preferences in browser settings.</p>
+                        <p><strong>Contact & Data Controller</strong><br>MENGANXUN – Email: <a href="mailto:DwayneMoore488950@hotmail.com">DwayneMoore488950@hotmail.com</a><br>Operations: FLAT/RM A22 9/F WAH SHING IND BLDG18 CHEUNG SHUN ST CHEUNG SHA WAN, Hong Kong.<br>Policy updated: May 2026.</p>
+                    </div>
+                </div>
+                <hr>
+                <p style="font-size:0.75rem; text-align:center;">By using our website, you acknowledge this privacy policy. menganxun.Shop is committed to transparency.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <div style="background: #F2ECE5; border-radius: 48px; padding: 56px 32px; text-align: center;">
+                <h2 style="font-size: 2rem; font-family: 'Cormorant Garamond', serif;">Need a bespoke wig or volume order?</h2>
+                <p style="max-width: 550px; margin: 16px auto; color: #5A4E44;">Our team responds within 12 hours. We offer private labeling and custom colours for salon professionals.</p>
+                <a href="mailto:DwayneMoore488950@hotmail.com" class="btn-primary" style="background: #AA7C5C; display: inline-block; margin-top: 8px;"><i class="fas fa-paper-plane"></i> DwayneMoore488950@hotmail.com</a>
+                <div style="margin-top: 32px;">
+                    <p><i class="fas fa-location-dot"></i> Shipped from Guangzhou, China — Main delivery to United Kingdom (3-5 business days)</p>
+                    <p class="domain-note" style="margin-top: 12px;">© menganxun.shop — All rights reserved</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <div class="footer-flex">
+            <div class="copyright">
+                © 2026 MENGANXUN — Luxury Hair Studio
+            </div>
+            <div class="footer-email">
+                <i class="fas fa-envelope"></i> <a href="mailto:DwayneMoore488950@hotmail.com">DwayneMoore488950@hotmail.com</a>
+            </div>
+            <div class="social-icons">
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-pinterest"></i>
+                <i class="fab fa-tiktok"></i>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 28px; font-size: 0.7rem; color:#b9aca0;">
+            <span>✔️ Order processed within 3 business days | ✈️ 3-5 days delivery to UK | 📦 Returns & Privacy as stated</span>
+        </div>
+    </div>
+</footer>
+
+<div class="scroll-top" id="scrollTopBtn">
+    <i class="fas fa-arrow-up"></i>
+</div>
+
+<script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            if(href === "#" || href === "") return;
+            const target = document.querySelector(href);
+            if(target) {
+                e.preventDefault();
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        });
+    });
+
+    const scrollBtn = document.getElementById('scrollTopBtn');
+    window.addEventListener('scroll', () => {
+        if(window.scrollY > 500) {
+            scrollBtn.classList.add('show');
+        } else {
+            scrollBtn.classList.remove('show');
+        }
+    });
+    scrollBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+</script>
+
+</body>
+</html>
